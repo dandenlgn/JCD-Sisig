@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+    *{
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    body{
+        background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.38), rgba(0,0,0,0)) 
+            ,url(/images/sisig.jfif) no-repeat;
+        background-size: cover;
+        color: white;
+        line-height: 1.7em;
+        margin: 0;
+    }
+
+    #navbar{
+        background: rgba(0, 0, 0, 0.7);
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+    }
+
+    .header{
+    overflow: auto;
+    }
+
+    .logo{
+    float: left;
+    width: 80px;
+    height: 70px;
+    margin-left: 10px;
+    margin-bottom: 20px;  
+    }
+
+    #navbar a{
+        color: #FAA51F;
+        text-decoration: none;
+    }
+    #navbar ul{
+        float: right;
+        list-style: none;
+        margin: 0;
+
+    }
+    #navbar ul li{
+        float: left;
+    }
+    .container ul li a{
+        display: inline;
+        margin: 25px;
+        letter-spacing: 2px; 
+    }
+    #navbar ul li a:hover{
+        color: #F43400;
+    }
+    .social img{
+        margin-right: 30px;
+        display: inline;
+        text-align: center;
+        float: right;
+    }
+
+
+    input[type=text]{
+        width: 300px;
+        height: 25px;
+        padding-left: 10px;
+    }
+
+    textarea{
+        width: 300px;
+        height: 50px;
+        padding-left: 10px;
+    }
+
+    #heading{
+        text-align: center;
+    }
+    
+
+    .form-wrap{
+        border: 2px solid #1c1302;
+        padding: 15px 0px 30px 0px;
+        display: flex;
+        justify-content: center;
+        background-color: #754400;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        opacity: 0.90;
+    }
+    
+    .form-wrap h3{
+        font-size: 25px;
+    }
+
+    .form-group{
+        padding: 15px 0px;
+    }
+
+    .required {
+        color:red;
+    }
+
+    .required:after {
+        content: "*>";
+        color: rgb(252, 225, 235);
+    }
+
+    #btn{
+        width: 120px;
+        height: 40px;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        background-color: rgb(255, 0, 68);
+        box-shadow: inset 0 0 0 0 #f9e506;
+        transition: ease-out 0.3s;
+        font-size: 15px;
+    }
+
+    #btn:hover{
+        box-shadow: inset 120px 0 0 0 #f9e506;
+        cursor: pointer;
+        color: black;
+    }
+
+    #team-section{
+    width: 100%;
+    height: 50%;
+    }
+    #team-section .case{
+        width: 100%;
+        margin: auto;
+    }
+    #team-section .case .row{
+        width: 100%;
+    }
+
+    .case, footer{
+        background-color: #754400;
+    }
+        
+    #team-section .case .row .title{
+        text-align: center;
+        width: 100%;
+    
+    }
+    #team-section .title h2{
+        float: left;
+        width: 100%;
+        height: 50%;
+        padding: 50px 30px;
+        overflow: hidden;
+        color: #FAA51F;
+        font-size: 50px;
+    }
+    #team-section .case .row .title p{
+        font-size: 18px;
+        font-family: sans-serif;
+        margin: 30px 0px;
+        color: rgb(255, 241, 239);
+    }
+    #team-section .case .team-card{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-top: 50px;
+
+    }
+    #team-section .case .team-card .card{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #team-section .case .team-card .card .image-section img{
+        height: 150px;
+        width: 160px;
+        border-radius: 50%;
+        
+    }
+    #team-section .case .team-card .card .content{
+        width: 100%;
+        text-align: center;
+    }
+
+    #team-section .case .team-card .card .content h3{
+        font-size: 20px;
+        margin-top: 10px;
+        letter-spacing: 1.5px;
+        color: #FAA51F;
+    }
+
+    .footer{
+    text-decoration: none;
+    }
+    .footer .head{
+        color: #EDC24A;
+        font-size: 15px;
+        padding-left: 100px;
+        text-decoration: none;
+    }
+    .footer li{
+        list-style: none;
+        padding-left: 100px;
+        list-style: none;
+        text-decoration: none;
+    
+    }
+    .footer li a{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 13px;
+    }
+    .boxes{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        padding: 2rem;
+        text-decoration: none;
+    }
+    /*----------*/
+    .divider{
+        margin: 0px 50px 0px 50px;
+        opacity: 0.8;
+        overflow: auto;
+    }
+    .down{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 45px;   
+    }
+    a{
+        color: #FAA51F;
+        text-decoration: none;
+    }
+    .copyright{
+        padding: 15px;
+        color: #FAA51F;
+        font-size: 15px;  
+    }
+
+    </style>
+
+<body>
+    <div class="header">
+        <nav id="navbar">
+            
+            <div class="container">
+                <h1><a href="/index.html"><img src="/images/fresh (2).png" class="logo"></a></h1>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="social">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank">
+                        <img src="/images/icons8-facebook-35.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/" target="_blank">
+                        <img src="/images/icons8-twitter-35.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank">
+                        <img src="/images/icons8-instagram-35.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/" target="_blank">
+                        <img src="/images/icons8-youtube-35.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+            <div id="heading">
+                <h1>Got Any Questions?</h1>
+    
+                <h3>Feel free to send us an email and we will get back to you as soon as possible!</h3>
+            </div>
+
+            <div class="form-wrap">
+
+
+            <form action="" class="myForm">
+
+                <h3>Contact Us</h3>
+
+                <div class="form-group">
+                    <label for="firstname"></label>
+                    <input type="text" id="firstname" name="firstname" placeholder="First name" RE>
+                </div>
+        
+                <div class="form-group">
+                    <label for="lastname"></label>
+                    <input type="text" id="lastname" name="lastname" 
+                    placeholder="Last name"><br>
+                </div>
+    
+                <div class="form-group">
+                    <label for="emailadd"></label>
+                    <input type="text" id="emailadd" name="emailadd" placeholder="Email address">
+                </div>
+        
+                <div class="form-group">
+                    <textarea name="question" id="question" cols="18" rows="3" placeholder="Enter your Question" required></textarea><br>
+                </div>
+
+                <input type="submit" id="btn" value="Submit">
+
+            </form>
+
+            </div>
+            
+        </div>
+
+        <script>
+
+            let form = document.body.getElementsByTagName('form')[0];
+        
+            form.addEventListener('submit', (e) => {
+                
+                let fname = document.getElementById('firstname');
+                let lname = document.getElementById('lastname');
+                let emadd = document.getElementById('emailadd');
+        
+        
+                if (!fname.value.length){
+                    fname.previousElementSibling.classList.add('required');
+                    e.preventDefault();          
+                }else{
+                    console.log (fname);
+                    console.log (fname.value.length);
+                    fname.previousElementSibling.classList.remove('required');
+                }
+        
+                if (!lname.value.length){
+                    lname.previousElementSibling.classList.add('required');
+                    e.preventDefault();          
+                }else{
+                    console.log (lname);
+                    console.log (lname.value.length);
+                    lname.previousElementSibling.classList.remove('required');
+                }
+        
+                if (!emadd.value.length){
+                    emadd.previousElementSibling.classList.add('required');
+                    e.preventDefault();          
+                }else{
+                    console.log (emadd);
+                    console.log (emadd.value.length);
+                    lname.previousElementSibling.classList.remove('required');
+                }
+            })
+        </script>
+        
+</body>
+
+    <section id="team-section">
+        <div class="case">
+            <div class="row">
+                <div class="title">
+                    <h2>Our Team</h2>
+                    <p>“We prepare and serve high quality, simple food, at a great value, in a home-like environment.”</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="card">
+                    <div class="image-section">
+                        <img src="/images/JR.jpg">
+                    </div>
+                    <div class="content">
+                        <h3>John Ray Siglos</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-section">
+                        <img src="/images/Cathy.jpg">
+                    </div>
+                    <div class="content">
+                        <h3>Cathy Quiza</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-section">
+                        <img src="/images/Daniel.jpg">
+                    </div>
+                    <div class="content">
+                        <h3>Daniel Enciso</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="boxes">
+            <div>
+                <ul>
+                    <li class="head">Feature</li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Live share</a></li>
+                    <li><a href="#">Video record</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li class="head">Community</li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">User Gallery</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li class="head">Company</li>
+                    <li><a href="#">Address</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Phone</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li class="head">Resources</li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            </div>
+
+            <hr class="divider">
+            <div class="down">
+                <div class="copyright" >
+                    <script>
+                      document.write('&copy;' );
+                      document.write(' 2020 - ');
+                      document.write(new Date().getFullYear());
+                      document.write(' www.JCDSISIG.com - All Rights Reserved.');
+                    </script>
+                </div>
+                  
+
+                
+                <div class="down-right">
+
+                    <a href="#">Follow Us</a>
+                    <a href="https://www.facebook.com/" target="_blank">
+                    <img src="/images/icons8-facebook-35.png">
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                    <img src="/images/icons8-twitter-35.png">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                    <img src="/images/icons8-instagram-35.png">
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank">
+                    <img src="/images/icons8-youtube-35.png">
+                    </a>
+                </div> 
+            </div>
+    </div>  
+</footer>
+
+</html>
